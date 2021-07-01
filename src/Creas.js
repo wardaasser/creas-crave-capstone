@@ -8,9 +8,9 @@ export function Creas() {
       <video
         autostart
         autoPlay
-        src={PalmTree.mp4}
-        class="vidContainer"
-        controls
+        src={PalmTree}
+        className="vidContainer"
+        // controls
         loop
         id="mainTopVideo"
         type="video/mp4"
