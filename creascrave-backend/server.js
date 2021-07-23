@@ -31,19 +31,19 @@ server.get(`/creascrave`, async (req, res) => {
 
 server.post(`/creascrave/customers`, async (req, res) => {
   await db.query(`INSERT INTO customers 
-    (namefirst, namelast, addressphysicalnumberandstreet, addressphysicalcity,addressphysicalstate, addressphysicalzipcode, phonenumber, addressshippingnumberandstreet, addressshippingcity, addressshippingstate, addressshippingzipcode, timestamp) VALUES (
-        ${req.body.namefirst},
-        ${req.body.namelast},
-        ${req.body.addressphysicalnumberandstreet},
-        ${req.body.addressphysicalcity},
-        ${req.body.addressphysicalstate},
-        ${req.body.addressphysicalzipcode},
-        ${req.body.phonenumber},
-        ${req.body.addressshippingnumberandstreet},
-        ${req.body.addressshippingcity},
-        ${req.body.addressshippingzipcode},
-        NOW() 
-        )`);
+  ("namefirst", "namelast", "addressphysicalnumberandstreet", "addressphysicalcity","addressphysicalstate", "addressphysicalzipcode", "phonenumber", "addressshippingnumberandstreet", "addressshippingcity", "addressshippingstate", "addressshippingzipcode", timestamp) VALUES (
+      '${req.body.namefirst}',
+      '${req.body.namelast}',
+      '${req.body.addressphysicalnumberandstreet}',
+      '${req.body.addressphysicalcity}',
+      '${req.body.addressphysicalstate}',
+      '${req.body.addressphysicalzipcode}',
+      '${req.body.phonenumber}',
+      '${req.body.addressshippingnumberandstreet}',
+      '${req.body.addressshippingcity}',
+      '${req.body.addressshippingzipcode}',
+      NOW() 
+      )`);
 
   const customers = await db.query(`SELECT * FROM creascrave.customers`);
   res.send({ customers: customers.rows });
