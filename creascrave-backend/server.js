@@ -25,8 +25,8 @@ const getCustomers = async () => {
   return customers.rows;
 };
 
-server.get(`/creascrave`, async (req, res) => {
-  res.send({});
+server.get(`/creascrave/customers`, async (req, res) => {
+  res.send({ customers: await getCustomers() });
 });
 
 server.post(`/creascrave/customers`, async (req, res) => {
@@ -46,12 +46,12 @@ server.post(`/creascrave/customers`, async (req, res) => {
       )`);
 
   const customers = await db.query(`SELECT * FROM creascrave.customers`);
-  res.send({ customers: customers.rows });
+  res.send({ customers: await getCustomers() });
 });
 
 server.put(`/creascrave/customers`, async (req, res) => {
   await db.query(
-    `UPDATE customers SET namefirst=${req.body.namefirst} WHERE id=${req.body.id}`
+    `UPDATE creascrave.customers SET namefirst=${req.body.namefirst} WHERE id=${req.body.id}`
   );
   res.send({ customers: await getCustomers() });
 });
