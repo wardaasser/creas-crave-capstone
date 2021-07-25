@@ -1,12 +1,12 @@
 import shoppingCartImg from "./images/shoppingCart.png";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <div className="container-fluid">
       <div className="row">
         <nav className="navbar navbar-expand-lg fixed-top navbar-light bglmccsblue">
           <div className="container-fluid">
-            <a className="navbar-brand" href={{ NavBar }}>
+            <a className="navbar-brand" href={{ Navbar }}>
               CREAS CRAVE
             </a>
             <button
@@ -60,4 +60,4 @@ const NavBar = () => {
     </div>
   );
 };
-export default NavBar;
+export default Navbar;

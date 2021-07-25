@@ -80,3 +80,54 @@ form > input::placeholder,
 #emailInput {
   max-width: 50%;
 }
+
+#mainLoginReturnDiv {
+  background-color: #545454;
+}
+
+#emailPwRow,
+#resets {
+  text-align: center;
+}
+
+label {
+  margin-right: 11px;
+  padding-bottom: 67px;
+}
+
+input.form-control#email,
+input.form-control#password {
+  padding: 17px;
+}
+
+#email,
+#password,
+#resets {
+  font-size: smaller;
+}
+
+button.btn-dark {
+  font-size: larger;
+  letter-spacing: 1.3px;
+
+  color: black;
+  background-color: white;
+  border: 0;
+
+  padding: 22px 44px;
+  margin-bottom: 11px;
+}
+
+button.btn-dark:hover {
+  background-color: #5ce1e6;
+}
+
+#resets {
+  color: #5ce1e6;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
