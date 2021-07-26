@@ -7,6 +7,7 @@ import CreativesInCart from "./CreativesInCart";
 import Customers from "./Customers";
 import Favorites from "./Favorites";
 import Login from "./Login";
+import Sidebar from "./Sidebar";
 import Users from "./Users";
 
 function App() {
@@ -14,32 +15,36 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/">
-            <Login />
-          </Route>
-
-          <Route path="/customers">
-            <Customers />
+          <Route path="/cart">
+            <Cart />
           </Route>
 
           <Route path="/creatives">
             <Creatives />
           </Route>
 
-          <Route path="/cart">
-            <Cart />
-          </Route>
-
           <Route path="/creativesincart">
             <CreativesInCart />
+          </Route>
+
+          <Route path="/customers">
+            <Customers />
           </Route>
 
           <Route path="/favorites">
             <Favorites />
           </Route>
 
+          <Route path="/sidebar">
+            <Sidebar />
+          </Route>
+
           <Route path="/users">
             <Users />
+          </Route>
+
+          <Route path="/">
+            <Login />
           </Route>
         </Switch>
       </Router>

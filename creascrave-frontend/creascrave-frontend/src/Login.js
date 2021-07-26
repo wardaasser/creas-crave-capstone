@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import lmDevLogo from "./images/lmDevLogo.png";
 
 const Login = () => {
@@ -28,9 +29,12 @@ const Login = () => {
               </label>
             </div>
 
-            <button type="submit" className="btn btn-dark center">
-              LOGIN
-            </button>
+            <Link to="/customers" style={{ textDecoration: "none" }}>
+              <button type="submit" className="btn btn-dark center">
+                LOGIN
+              </button>
+            </Link>
+
             <div>
               <p id="resets">
                 <span>reset username</span>&nbsp;&nbsp;&nbsp;
