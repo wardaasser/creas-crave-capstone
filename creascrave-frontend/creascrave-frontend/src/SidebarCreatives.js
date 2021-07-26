@@ -1,4 +1,4 @@
-const Sidebar = () => {
+const SidebarCreatives = () => {
   return (
     <div className="container-fluid">
       <div className="row">
@@ -16,28 +16,28 @@ const Sidebar = () => {
               className="list-group-item"
               style={{ backgroundColor: "#c8c4bd", padding: 25 }}
             >
-              purchase history
+              customers
             </li>
             <br />
             <li
               className="list-group-item"
               style={{ backgroundColor: "#c8c4bd", padding: 25 }}
             >
-              favorite creatives
+              purchases
             </li>
             <br />
             <li
               className="list-group-item"
               style={{ backgroundColor: "#c8c4bd", padding: 25 }}
             >
-              items in cart
+              favorites
             </li>
             <br />
             <li
               className="list-group-item"
               style={{ backgroundColor: "#c8c4bd", padding: 25 }}
             >
-              delete account
+              abandoned carts
             </li>
             <br />
             <li
@@ -52,4 +52,4 @@ const Sidebar = () => {
     </div>
   );
 };
-export default Sidebar;
+export default SidebarCreatives;

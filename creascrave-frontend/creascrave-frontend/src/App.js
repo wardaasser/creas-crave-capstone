@@ -7,7 +7,11 @@ import CreativesInCart from "./CreativesInCart";
 import Customers from "./Customers";
 import Favorites from "./Favorites";
 import Login from "./Login";
+import NavbarBackend from "./NavbarBackend";
+import Purchases from "./Purchases";
 import Sidebar from "./Sidebar";
+import SidebarCreatives from "./SidebarCreatives";
+import SidebarPurchases from "./SidebarPurchases";
 import Users from "./Users";
 
 function App() {
@@ -35,8 +39,24 @@ function App() {
             <Favorites />
           </Route>
 
+          <Route path="/navbarbackend">
+            <NavbarBackend />
+          </Route>
+
+          <Route path="/purchases">
+            <Purchases />
+          </Route>
+
           <Route path="/sidebar">
             <Sidebar />
+          </Route>
+
+          <Route path="/sidebarcreatives">
+            <SidebarCreatives />
+          </Route>
+
+          <Route path="/sidebarpurchases">
+            <SidebarPurchases />
           </Route>
 
           <Route path="/users">
