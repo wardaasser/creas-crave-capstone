@@ -100,12 +100,13 @@ input.form-control#password {
   padding: 17px;
 }
 
+div > p#createAccount > a,
 #createAccount,
 #email,
 #password,
 #resets {
   color: #5ce1e6;
-  font-size: smaller;
+  font-size: small;
   text-align: center;
   text-decoration: none;
 }

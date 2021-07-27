@@ -44,13 +44,15 @@ const Navbar = () => {
                   </form>
                 </div>
                 <div className="col-2">
-                  <img
-                    className="img-responsive"
-                    style={{ height: 37 }}
-                    src={shoppingCartImg}
-                    alt="Shopping Cart"
-                    id="shopCart"
-                  />
+                  <a href="/">
+                    <img
+                      className="img-responsive"
+                      style={{ height: 37 }}
+                      src={shoppingCartImg}
+                      alt="Shopping Cart"
+                      id="shopCart"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

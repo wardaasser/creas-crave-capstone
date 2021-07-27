@@ -30,7 +30,9 @@ const Login = () => {
             </div>
 
             <div>
-              <p id="createAccount">create new account</p>
+              <p id="createAccount">
+                <a href="/">create new account</a>
+              </p>
             </div>
 
             <Link to="/customers" style={{ textDecoration: "none" }}>
@@ -59,16 +61,18 @@ const Login = () => {
       </div>
 
       <div className="row" style={{ backgroundColor: "white" }}>
-        <img
-          src={lmDevLogo}
-          alt="La'Tonia Mertica Dot Dev Logo"
-          className="center"
-          style={{
-            width: "37%",
-            height: "auto",
-            marginTop: 30,
-          }}
-        />
+        <a href="/">
+          <img
+            src={lmDevLogo}
+            alt="La'Tonia Mertica Dot Dev Logo"
+            className="center"
+            style={{
+              width: "37%",
+              height: "auto",
+              marginTop: 30,
+            }}
+          />
+        </a>
       </div>
     </div>
   );
