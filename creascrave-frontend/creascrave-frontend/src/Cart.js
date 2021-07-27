@@ -1,4 +1,12 @@
+import NavbarBackend from "./NavbarBackend";
+import Footer from "./Footer";
+
 const Cart = () => {
-  return <div>CART</div>;
+  return (
+    <div>
+      <NavbarBackend />
+      <Footer />
+    </div>
+  );
 };
 export default Cart;

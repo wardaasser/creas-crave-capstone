@@ -7,7 +7,8 @@ const Sidebar = ({ links }) => {
           style={{
             fontSize: "small",
             marginLeft: 22,
-            maxWidth: "13%",
+            minWidth: "18%",
+            maxWidth: "20%",
             textAlign: "center",
           }}
         >
@@ -17,7 +18,7 @@ const Sidebar = ({ links }) => {
                 <>
                   <li
                     className="list-group-item"
-                    style={{ backgroundColor: "#c8c4bd", padding: 25 }}
+                    style={{ backgroundColor: "#c8c4bd", padding: 37 }}
                   >
                     {link}
                   </li>
@@ -25,40 +26,6 @@ const Sidebar = ({ links }) => {
                 </>
               );
             })}
-            <li
-              className="list-group-item"
-              style={{ backgroundColor: "#c8c4bd", padding: 25 }}
-            >
-              purchase history
-            </li>
-            <br />
-            <li
-              className="list-group-item"
-              style={{ backgroundColor: "#c8c4bd", padding: 25 }}
-            >
-              favorite creatives
-            </li>
-            <br />
-            <li
-              className="list-group-item"
-              style={{ backgroundColor: "#c8c4bd", padding: 25 }}
-            >
-              items in cart
-            </li>
-            <br />
-            <li
-              className="list-group-item"
-              style={{ backgroundColor: "#c8c4bd", padding: 25 }}
-            >
-              delete account
-            </li>
-            <br />
-            <li
-              className="list-group-item"
-              style={{ backgroundColor: "#c8c4bd", padding: 25 }}
-            >
-              logout
-            </li>
           </ul>
         </div>
       </div>

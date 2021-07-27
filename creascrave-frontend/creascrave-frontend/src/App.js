@@ -11,8 +11,6 @@ import Login from "./Login";
 import NavbarBackend from "./NavbarBackend";
 import Purchases from "./Purchases";
 import Sidebar from "./Sidebar";
-import SidebarCreatives from "./SidebarCreatives";
-import SidebarPurchases from "./SidebarPurchases";
 import Users from "./Users";
 
 function App() {
@@ -53,16 +51,59 @@ function App() {
           </Route>
 
           <Route path="/sidebar">
-            <Sidebar links={["link1", "link 2"]} />
+            <Sidebar
+              links={[
+                "purchase history",
+                "favorite creatives",
+                "items in cart",
+                "delete account",
+                "logout",
+              ]}
+            />
           </Route>
 
           <Route path="/sidebarcreatives">
-            <SidebarCreatives />
+            <Sidebar
+              links={[
+                "customers",
+                "purchases",
+                "favorites",
+                "abandoned carts",
+                "logout",
+              ]}
+            />
           </Route>
 
           <Route path="/sidebarpurchases">
-            <SidebarPurchases />
+            <Sidebar
+              links={[
+                "customers",
+                "creatives sold",
+                "sales amounts",
+                "sold dates",
+                "logout",
+              ]}
+            />
           </Route>
+
+          {/* <Route path="/sidebar">
+            <Sidebar
+              links={[
+                "customers",
+                "purchases",
+                "favorites",
+                "abandoned carts",
+                "creatives sold",
+                "sales amounts",
+                "sold dates",
+                "purchase history",
+                "favorite creatives",
+                "items in cart",
+                "delete account",
+                "logout",
+              ]}
+            />
+          </Route> */}
 
           <Route path="/users">
             <Users />

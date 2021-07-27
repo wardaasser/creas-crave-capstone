@@ -1,8 +1,8 @@
 import NavbarBackend from "./NavbarBackend";
 import Sidebar from "./Sidebar";
-import lmDevLogo from "./images/lmDevLogo.png";
+import Footer from "./Footer";
 
-const Customers = () => {
+const Customers = ({ links }) => {
   return (
     <div
       className="container-fluid"
@@ -23,6 +23,7 @@ const Customers = () => {
 
       <NavbarBackend />
       <Sidebar className="col-4" links={[]} />
+
       <div className="row">
         <div className="col-8" style={{ marginBottom: 22 }}>
           <form style={{ marginLeft: 500 }}>
@@ -101,18 +102,7 @@ const Customers = () => {
         </div>
       </div>
 
-      <div className="row" style={{ backgroundColor: "white" }}>
-        <img
-          src={lmDevLogo}
-          alt="La'Tonia Mertica Dot Dev Logo"
-          className="center"
-          style={{
-            width: "37%",
-            height: "auto",
-            marginTop: 30,
-          }}
-        />
-      </div>
+      <Footer />
     </div>
   );
 };

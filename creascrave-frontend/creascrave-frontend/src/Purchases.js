@@ -1,6 +1,6 @@
+import Footer from "./Footer";
 import NavbarBackend from "./NavbarBackend";
-import SidebarPurchases from "./SidebarPurchases";
-import lmDevLogo from "./images/lmDevLogo.png";
+import Sidebar from "./Sidebar";
 
 const Purchases = () => {
   return (
@@ -22,7 +22,7 @@ const Purchases = () => {
       </div>
 
       <NavbarBackend />
-      <SidebarPurchases className="col-4" />
+      <Sidebar className="col-4" />
       <div className="row">
         <div className="col-8" style={{ marginBottom: 22 }}></div>
       </div>
@@ -42,19 +42,7 @@ const Purchases = () => {
           </h1>
         </p>
       </div>
-
-      <div className="row" style={{ backgroundColor: "white" }}>
-        <img
-          src={lmDevLogo}
-          alt="La'Tonia Mertica Dot Dev Logo"
-          className="center"
-          style={{
-            width: "37%",
-            height: "auto",
-            marginTop: 30,
-          }}
-        />
-      </div>
+      <Footer />
     </div>
   );
 };
