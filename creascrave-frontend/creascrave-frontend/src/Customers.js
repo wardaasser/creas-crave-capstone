@@ -22,7 +22,7 @@ const Customers = () => {
       </div>
 
       <NavbarBackend />
-      <Sidebar className="col-4" />
+      <Sidebar className="col-4" links={[]} />
       <div className="row">
         <div className="col-8" style={{ marginBottom: 22 }}>
           <form style={{ marginLeft: 500 }}>

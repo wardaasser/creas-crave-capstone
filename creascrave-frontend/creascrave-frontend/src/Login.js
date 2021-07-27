@@ -29,6 +29,10 @@ const Login = () => {
               </label>
             </div>
 
+            <div>
+              <p id="createAccount">create new account</p>
+            </div>
+
             <Link to="/customers" style={{ textDecoration: "none" }}>
               <button type="submit" className="btn btn-dark center">
                 LOGIN
@@ -36,9 +40,18 @@ const Login = () => {
             </Link>
 
             <div>
-              <p id="resets">
-                <span>reset username</span>&nbsp;&nbsp;&nbsp;
-                <span>reset password</span>
+              <p style={{ textAlign: "center" }}>
+                <span>
+                  <a href="/" id="resets">
+                    reset username
+                  </a>
+                </span>
+                &nbsp;&nbsp;&nbsp;
+                <span>
+                  <a href="/" id="resets">
+                    reset password
+                  </a>
+                </span>
               </p>
             </div>
           </form>

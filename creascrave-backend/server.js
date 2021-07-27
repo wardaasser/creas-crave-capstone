@@ -42,6 +42,7 @@ server.post(`/creascrave/customers`, async (req, res) => {
       '${req.body.addressshippingnumberandstreet}',
       '${req.body.addressshippingcity}',
       '${req.body.addressshippingzipcode}',
+      '${req.body.emailAddress}',
       NOW() 
       )`);
 

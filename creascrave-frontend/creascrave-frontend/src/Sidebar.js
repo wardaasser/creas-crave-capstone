@@ -1,4 +1,4 @@
-const Sidebar = () => {
+const Sidebar = ({ links }) => {
   return (
     <div className="container-fluid">
       <div className="row">
@@ -12,6 +12,19 @@ const Sidebar = () => {
           }}
         >
           <ul className="list-group" style={{ paddingTop: 87 }}>
+            {links.map((link) => {
+              return (
+                <>
+                  <li
+                    className="list-group-item"
+                    style={{ backgroundColor: "#c8c4bd", padding: 25 }}
+                  >
+                    {link}
+                  </li>
+                  <br />
+                </>
+              );
+            })}
             <li
               className="list-group-item"
               style={{ backgroundColor: "#c8c4bd", padding: 25 }}

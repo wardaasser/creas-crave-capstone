@@ -100,10 +100,14 @@ input.form-control#password {
   padding: 17px;
 }
 
+#createAccount,
 #email,
 #password,
 #resets {
+  color: #5ce1e6;
   font-size: smaller;
+  text-align: center;
+  text-decoration: none;
 }
 
 button.btn-dark {
@@ -120,10 +124,6 @@ button.btn-dark {
 
 button.btn-dark:hover {
   background-color: #5ce1e6;
-}
-
-#resets {
-  color: #5ce1e6;
 }
 
 .center {

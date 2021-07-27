@@ -48,7 +48,7 @@ function App() {
           </Route>
 
           <Route path="/sidebar">
-            <Sidebar />
+            <Sidebar links={["link1", "link 2"]} />
           </Route>
 
           <Route path="/sidebarcreatives">
