@@ -6,6 +6,7 @@ import Creatives from "./Creatives";
 import CreativesInCart from "./CreativesInCart";
 import Customers from "./Customers";
 import Favorites from "./Favorites";
+import Footer from "./Footer";
 import Login from "./Login";
 import NavbarBackend from "./NavbarBackend";
 import Purchases from "./Purchases";
@@ -37,6 +38,10 @@ function App() {
 
           <Route path="/favorites">
             <Favorites />
+          </Route>
+
+          <Route path="/footer">
+            <Footer />
           </Route>
 
           <Route path="/navbarbackend">
