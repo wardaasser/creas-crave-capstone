@@ -1,6 +1,7 @@
-import Footer from "./Footer";
 import NavbarBackend from "./NavbarBackend";
 import Sidebar from "./Sidebar";
+import Disclaimer from "./Disclaimer";
+import Footer from "./Footer";
 
 const Creatives = () => {
   return (
@@ -27,21 +28,7 @@ const Creatives = () => {
         <div className="col-8" style={{ marginBottom: 22 }}></div>
       </div>
 
-      <div className="row disclaimer" style={{ backgroundColor: "#360836" }}>
-        <p>
-          <h1
-            style={{
-              fontSize: "smaller",
-              color: "white",
-              textAlign: "center",
-              paddingTop: 20,
-            }}
-          >
-            disclaimer: unauthorized access and/or usage will be prosecuted to
-            the fullest extent of the creatives law.
-          </h1>
-        </p>
-      </div>
+      <Disclaimer />
       <Footer />
     </div>
   );

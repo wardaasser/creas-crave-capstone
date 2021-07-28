@@ -12,7 +12,7 @@ const Sidebar = ({ links }) => {
             textAlign: "center",
           }}
         >
-          <ul className="list-group" style={{ paddingTop: 87 }}>
+          {/* <ul className="list-group" style={{ paddingTop: 87 }}>
             {links.map((link) => {
               return (
                 <>
@@ -26,7 +26,7 @@ const Sidebar = ({ links }) => {
                 </>
               );
             })}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>

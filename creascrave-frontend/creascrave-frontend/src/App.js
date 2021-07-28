@@ -5,6 +5,7 @@ import Cart from "./Cart";
 import Creatives from "./Creatives";
 import CreativesInCart from "./CreativesInCart";
 import Customers from "./Customers";
+import Disclaimer from "./Disclaimer";
 import Favorites from "./Favorites";
 import Footer from "./Footer";
 import Login from "./Login";
@@ -32,6 +33,10 @@ function App() {
 
           <Route path="/customers">
             <Customers />
+          </Route>
+
+          <Route path="/disclaimer">
+            <Disclaimer />
           </Route>
 
           <Route path="/favorites">
