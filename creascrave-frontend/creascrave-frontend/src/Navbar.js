@@ -1,12 +1,13 @@
 import shoppingCartImg from "./images/shoppingCart.png";
+import headShoulder from "./images/headShoulder.png";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div className="container-fluid">
       <div className="row">
         <nav className="navbar navbar-expand-lg fixed-top navbar-light bglmccsblue">
           <div className="container-fluid">
-            <a className="navbar-brand" href={{ Navbar }}>
+            <a className="navbar-brand" href={{ NavBar }}>
               CREAS CRAVE
             </a>
             <button
@@ -25,7 +26,7 @@ const Navbar = () => {
               className="collapse navbar-collapse navbar-left"
               id="navbarSupportedContent"
             >
-              <div className="row" style={{ marginTop: 10 }}>
+              <div className="row" style={{ marginTop: 10, marginRight: 20 }}>
                 <div className="col">
                   <form className="d-flex">
                     <input
@@ -43,16 +44,23 @@ const Navbar = () => {
                     </button>
                   </form>
                 </div>
-                <div className="col-2">
-                  <a href="/">
-                    <img
-                      className="img-responsive"
-                      style={{ height: 37 }}
-                      src={shoppingCartImg}
-                      alt="Shopping Cart"
-                      id="shopCart"
-                    />
-                  </a>
+                <div className="col-1" style={{ marginRight: 20 }}>
+                  <img
+                    className="img-responsive"
+                    style={{ height: 37 }}
+                    src={shoppingCartImg}
+                    alt="Shopping Cart"
+                    id="shopCart"
+                  />
+                </div>
+                <div className="col-1">
+                  <img
+                    className="img-responsive"
+                    style={{ height: 37, filter: "invert()" }}
+                    src={headShoulder}
+                    alt="Head and Shoulders"
+                    id="headShoulder"
+                  />
                 </div>
               </div>
             </div>
@@ -62,4 +70,4 @@ const Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+export default NavBar;
