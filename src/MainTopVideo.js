@@ -3,7 +3,7 @@ import PalmTree from "./PalmTree.mp4";
 
 export function MainTopVideo() {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <video
         autostart="true"
         autoPlay={false}
@@ -16,6 +16,21 @@ export function MainTopVideo() {
         id="mainTopVideo"
         type="video/mp4"
       ></video>
+
+      <a
+        className="btn btn-secondary"
+        href="https://gumroad.com/l/VmnNl"
+        style={{
+          position: "absolute",
+          top: 450,
+          left: 50,
+          zIndex: 5,
+          backgroundColor: "#5ce1e6",
+          border: "none",
+        }}
+      >
+        BUY NOW
+      </a>
     </div>
   );
 }

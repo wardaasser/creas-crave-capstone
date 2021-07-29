@@ -3,7 +3,7 @@ import LeafStyled from "./LeafStyled.mp4";
 
 export function LeafStyledVideo() {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <video
         autostart="true"
         autoPlay={false}
@@ -16,6 +16,21 @@ export function LeafStyledVideo() {
         id="leafStyledVideo"
         type="video/mp4"
       ></video>
+
+      <a
+        className="btn btn-secondary"
+        href="https://gumroad.com/l/VsCwT"
+        style={{
+          position: "absolute",
+          top: 215,
+          left: 50,
+          zIndex: 5,
+          backgroundColor: "#5ce1e6",
+          border: "none",
+        }}
+      >
+        BUY NOW
+      </a>
     </div>
   );
 }

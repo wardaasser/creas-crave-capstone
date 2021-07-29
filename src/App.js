@@ -23,7 +23,9 @@ function App() {
   return (
     <div className="App container-fluid">
       <Navbar />
+
       <MainTopVideo />
+
       <div className="row">
         <div className="col noPadding">
           <WaterWalkVideo />

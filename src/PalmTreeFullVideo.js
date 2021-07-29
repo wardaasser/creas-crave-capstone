@@ -3,7 +3,7 @@ import PalmTreeFull from "./PalmTreeFull.mp4";
 
 export function PalmTreeFullVideo() {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <video
         autostart="true"
         autoPlay={false}
@@ -16,6 +16,21 @@ export function PalmTreeFullVideo() {
         id="palmTreeFullVideo"
         type="video/mp4"
       ></video>
+
+      <a
+        className="btn btn-secondary"
+        href="https://gumroad.com/l/hrxFaI"
+        style={{
+          position: "absolute",
+          top: 215,
+          left: 60,
+          zIndex: 5,
+          backgroundColor: "#5ce1e6",
+          border: "none",
+        }}
+      >
+        BUY NOW
+      </a>
     </div>
   );
 }
