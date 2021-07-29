@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "./NavBar";
+import Navbar from "./Navbar";
 import BodyLinks from "./BodyLinks";
 import Footer from "./Footer";
 
@@ -22,7 +22,7 @@ import { FloralFloorStyledVideo } from "./FloralFloorStyledVideo";
 function App() {
   return (
     <div className="App container-fluid">
-      <NavBar />
+      <Navbar />
       <MainTopVideo />
       <div className="row">
         <div className="col noPadding">
