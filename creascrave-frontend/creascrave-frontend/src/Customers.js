@@ -1,9 +1,9 @@
 import NavbarBackend from "./NavbarBackend";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 
-let allCustomers;
+// let allCustomers;
 const Customers = ({ links }) => {
   const [customers, setCustomers] = useState(null);
   const table = useRef(null);
@@ -57,27 +57,15 @@ const Customers = ({ links }) => {
       className="container-fluid"
       style={{ marginTop: -44, backgroundColor: "#545454" }}
     >
-      <div className="btn-group">
-        <button
-          className="btn btn-secondary btn-sm dropdown-toggle"
-          type="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          toggle creatives view
-        </button>
-        <div className="dropdown-menu">...</div>
-      </div>
-
       <NavbarBackend />
-      <Sidebar className="col-4" links={[]} />
-
-      <div className="row" style={{ marginLeft: 300, marginRight: 50 }}>
+      <div>
+        <Sidebar type="cart" />
+      </div>
+      <div className="row" style={{ marginLeft: 325 }}>
         <div>
           <form onSubmit={addCustomer}>
-            <div className="row" style={{ marginTop: 75 }}>
-              <div className="col-6">
+            <div className="row" style={{ marginTop: -500 }}>
+              <div className="col-5">
                 <label
                   htmlFor="firstName"
                   className="form-label"
@@ -93,7 +81,7 @@ const Customers = ({ links }) => {
                 />
               </div>
 
-              <div className="col-6">
+              <div className="col-5">
                 <label
                   htmlFor="lastName"
                   className="form-label"
@@ -111,7 +99,7 @@ const Customers = ({ links }) => {
             </div>
 
             <div className="row">
-              <div className="col">
+              <div className="col-10">
                 <div>
                   <label
                     htmlFor="address1"
@@ -131,7 +119,7 @@ const Customers = ({ links }) => {
             </div>
 
             <div className="row">
-              <div className="col">
+              <div className="col-10">
                 <div>
                   <label
                     htmlFor="address2"
@@ -150,7 +138,7 @@ const Customers = ({ links }) => {
             </div>
 
             <div className="row">
-              <div className="col-6">
+              <div className="col-5">
                 <div>
                   <label
                     htmlFor="city"
@@ -168,7 +156,7 @@ const Customers = ({ links }) => {
                 </div>
               </div>
 
-              <div className="col-3">
+              <div className="col-2">
                 <div>
                   <label
                     htmlFor="state"
@@ -238,7 +226,7 @@ const Customers = ({ links }) => {
                 </div>
               </div>
 
-              <div className="col">
+              <div className="col-3">
                 <div>
                   <label
                     htmlFor="zipCode"
