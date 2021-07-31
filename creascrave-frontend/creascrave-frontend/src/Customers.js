@@ -64,7 +64,7 @@ const Customers = ({ links }) => {
       <div className="row" style={{ marginLeft: 325 }}>
         <div>
           <form onSubmit={addCustomer}>
-            <div className="row" style={{ marginTop: -500 }}>
+            <div className="row" style={{ marginTop: -425 }}>
               <div className="col-5">
                 <label
                   htmlFor="firstName"
@@ -304,7 +304,6 @@ const Customers = ({ links }) => {
                     fontWeight: 700,
                     marginTop: -25,
                     marginLeft: 450,
-                    marginBottom: 75,
                     paddingTop: 17,
                     paddingBottom: 17,
                     paddingLeft: 37,

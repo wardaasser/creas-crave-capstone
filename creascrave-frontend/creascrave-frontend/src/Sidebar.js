@@ -33,24 +33,32 @@ const Sidebar = ({ type }) => {
           className="col"
           style={{
             fontSize: "small",
-            marginLeft: 22,
             minWidth: "18%",
             maxWidth: "20%",
             textAlign: "center",
           }}
         >
-          <ul className="list-group" style={{ paddingTop: 87 }}>
+          <ul
+            className="list-group"
+            style={{
+              paddingTop: 62,
+              paddingBottom: -200,
+              textAlign: "left",
+            }}
+          >
             {links.map((link) => {
               return (
                 <>
                   <li
                     className="list-group-item"
-                    style={{ backgroundColor: "#c8c4bd", padding: 37 }}
+                    style={{
+                      backgroundColor: "#c8c4bd",
+                      padding: 37,
+                    }}
                     href={link.destination}
                   >
                     {link.label}
                   </li>
-                  <br />
                 </>
               );
             })}
