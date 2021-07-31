@@ -1,4 +1,4 @@
-import shoppingCartImg from "./images/shoppingCart.png";
+// import shoppingCartImg from "./images/shoppingCart.png";
 import headShoulder from "./images/headShoulder.png";
 
 const NavBar = () => {
@@ -44,7 +44,7 @@ const NavBar = () => {
                     </button>
                   </form>
                 </div>
-                <div className="col-1" style={{ marginRight: 20 }}>
+                {/* <div className="col-1" style={{ marginRight: 20 }}>
                   <img
                     className="img-responsive"
                     style={{ height: 37 }}
@@ -52,11 +52,16 @@ const NavBar = () => {
                     alt="Shopping Cart"
                     id="shopCart"
                   />
-                </div>
+                </div> */}
                 <div className="col-1">
                   <img
                     className="img-responsive"
-                    style={{ height: 37, filter: "invert()" }}
+                    style={{
+                      height: 34,
+                      filter: "invert()",
+                      marginTop: 3,
+                      paddingRight: 410,
+                    }}
                     src={headShoulder}
                     alt="Head and Shoulders"
                     id="headShoulder"
