@@ -1,4 +1,4 @@
-import shoppingCartImg from "./images/shoppingCart.png";
+// import shoppingCartImg from "./images/shoppingCart.png";
 import headShoulder from "./images/headShoulder.png";
 
 const Navbar = () => {
@@ -26,7 +26,13 @@ const Navbar = () => {
               className="collapse navbar-collapse navbar-left"
               id="navbarSupportedContent"
             >
-              <div className="row" style={{ marginTop: 10, marginRight: 20 }}>
+              <div
+                className="row"
+                style={{
+                  marginTop: 10,
+                  marginRight: 20,
+                }}
+              >
                 <div className="col">
                   <form className="d-flex">
                     <input
@@ -44,7 +50,7 @@ const Navbar = () => {
                     </button>
                   </form>
                 </div>
-                <div className="col-1" style={{ marginRight: 20 }}>
+                {/* <div className="col-1" style={{ marginRight: 20 }}>
                   <img
                     className="img-responsive"
                     style={{ height: 37 }}
@@ -52,11 +58,11 @@ const Navbar = () => {
                     alt="Shopping Cart"
                     id="shopCart"
                   />
-                </div>
+                </div> */}
                 <div className="col-1">
                   <img
                     className="img-responsive"
-                    style={{ height: 37 }}
+                    style={{ height: 34, marginTop: 3, paddingRight: 410 }}
                     src={headShoulder}
                     alt="Head and Shoulders"
                     id="headShoulder"

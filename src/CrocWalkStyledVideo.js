@@ -18,7 +18,7 @@ export function CrocWalkStyledVideo() {
       ></video>
 
       <a
-        className="btn btn-secondary"
+        className="btn btn-secondary zoom"
         href="https://gumroad.com/l/ftskH"
         style={{
           position: "absolute",

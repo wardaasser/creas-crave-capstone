@@ -18,7 +18,7 @@ export function PalmTreeFullVideo() {
       ></video>
 
       <a
-        className="btn btn-secondary"
+        className="btn btn-secondary zoom"
         href="https://gumroad.com/l/hrxFaI"
         style={{
           position: "absolute",

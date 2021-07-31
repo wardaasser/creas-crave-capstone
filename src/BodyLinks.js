@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+const handleBodyLinks = (bodyLinks) => {
+  if (bodyLinks === "myStory") {
+    return "";
+  } else {
+    return "myStory";
+  }
+};
+
 const BodyLinks = () => {
   const [underBodyLinks, setUnderBodyLinks] = useState();
   return (
@@ -50,11 +58,13 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkMyStory"
           id="toMyStory"
           onClick={() => {
-            if (underBodyLinks === "myStory") {
-              setUnderBodyLinks("");
-            } else {
-              setUnderBodyLinks("myStory");
-            }
+            const links = handleBodyLinks(underBodyLinks);
+            setUnderBodyLinks(links);
+            // if (underBodyLinks === "myStory") {
+            //   setUnderBodyLinks("");
+            // } else {
+            //   setUnderBodyLinks("myStory");
+            // }
           }}
           style={{
             textDecoration: underBodyLinks === "myStory" ? "underline" : "none",

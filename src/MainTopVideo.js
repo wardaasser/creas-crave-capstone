@@ -18,7 +18,7 @@ export function MainTopVideo() {
       ></video>
 
       <a
-        className="btn btn-secondary"
+        className="btn btn-secondary zoom"
         href="https://gumroad.com/l/VmnNl"
         style={{
           position: "absolute",

@@ -18,7 +18,7 @@ export function FloralFloorStyledVideo() {
       ></video>
 
       <a
-        className="btn btn-secondary"
+        className="btn btn-secondary zoom"
         href="https://gumroad.com/l/ZNlxf"
         style={{
           position: "absolute",

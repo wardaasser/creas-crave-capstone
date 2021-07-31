@@ -18,7 +18,7 @@ export function WaterWalkVideo() {
       ></video>
 
       <a
-        className="btn btn-secondary"
+        className="btn btn-secondary zoom"
         href="https://gumroad.com/l/rBovh"
         style={{
           position: "absolute",

@@ -19,7 +19,6 @@ body {
 .bglmccsblue {
   background-color: #5ce1e6;
   opacity: 0.93;
-
   height: 157px;
   margin-top: -50px;
 }
@@ -60,10 +59,6 @@ form > input::placeholder,
   margin-left: 0;
 }
 
-.logoImg {
-  margin-bottom: 7px;
-}
-
 #mainTopVideo {
   margin-top: -43px;
 }
@@ -96,6 +91,15 @@ form > input::placeholder,
 .noPadding {
   padding-left: 0;
   padding-right: 6px;
+}
+
+.btn-secondary:hover {
+  background-color: #360836 !important;
+}
+
+.zoom:hover {
+  transform: scale(1.25);
+  transition: ease-in-out 0.2s;
 }
 
 .bodyLinks {
@@ -263,7 +267,7 @@ h2 {
 
 .notbold {
   font-weight: normal;
-  font-size: small;
+  font-size: medium;
   line-height: 5px;
 }
 
