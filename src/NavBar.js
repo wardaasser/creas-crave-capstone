@@ -45,6 +45,7 @@ const Navbar = () => {
                       className="btn btn-outline-light"
                       type="button"
                       id="searchSubmitBtn"
+                      data-cy="search-submit"
                     >
                       search
                     </button>

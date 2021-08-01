@@ -28,6 +28,7 @@ export function MainTopVideo() {
           backgroundColor: "#5ce1e6",
           border: "none",
         }}
+        data-cy="buy-main-vid"
       >
         BUY NOW
       </a>
