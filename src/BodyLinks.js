@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-const handleBodyLinks = (bodyLinks) => {
-  if (bodyLinks === "myStory") {
-    return "";
-  } else {
-    return "myStory";
-  }
-};
+//CODE FOR FN PAIRED WITH CODE IN MYSTORY BELOW TO JEST TEST
+// export const handleBodyLinks = (bodyLinks) => {
+//   if (bodyLinks === "myStory") {
+//     return "myStory";
+//   } else {
+//     return "false";
+//   }
+// };
 
 const BodyLinks = () => {
   const [underBodyLinks, setUnderBodyLinks] = useState();
@@ -58,13 +59,14 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkMyStory"
           id="toMyStory"
           onClick={() => {
-            const links = handleBodyLinks(underBodyLinks);
-            setUnderBodyLinks(links);
-            // if (underBodyLinks === "myStory") {
-            //   setUnderBodyLinks("");
-            // } else {
-            //   setUnderBodyLinks("myStory");
-            // }
+            //CODE TO TEST MYSTORY PAIRED WITH FN COMMENTED OUT ABOVE
+            // const links = handleBodyLinks(underBodyLinks);
+            // setUnderBodyLinks(links);
+            if (underBodyLinks === "myStory") {
+              setUnderBodyLinks("");
+            } else {
+              setUnderBodyLinks("myStory");
+            }
           }}
           style={{
             textDecoration: underBodyLinks === "myStory" ? "underline" : "none",
