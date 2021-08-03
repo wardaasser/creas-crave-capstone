@@ -28,20 +28,54 @@ function App() {
     {
       original: <WaterWalkVideo />,
       styled: <WaterWalkStyledVideo />,
-      tags: ["water", "walk"],
+      tags: ["water", "walk", "feet", "beach", "ocean", "stroll", "sand"],
     },
     {
       original: <CrocWalkVideo />,
       styled: <CrocWalkStyledVideo />,
-      tags: ["water", "croc"],
+      tags: [
+        "croc",
+        "walk",
+        "reptile",
+        "water",
+        "semiaquatic",
+        "slither",
+        "sand",
+      ],
+    },
+    {
+      original: <PalmTreeFullVideo />,
+      styled: <PalmTreeFullStyledVideo />,
+      tags: ["palm", "tree", "sky", "wind", "shadow", "leaves", "evergreen"],
+    },
+    {
+      original: <LeafVideo />,
+      styled: <LeafStyledVideo />,
+      tags: ["leaf", "stem", "wind", "breeze", "plant", "leaves", "yard"],
+    },
+    {
+      original: <RockyWaterVideo />,
+      styled: <RockyWaterStyledVideo />,
+      tags: ["rocky", "water", "rock", "beach", "ocean", "bird", "sand"],
+    },
+    {
+      original: <FloralFloorVideo />,
+      styled: <FloralFloorStyledVideo />,
+      tags: [
+        "floral",
+        "floor",
+        "pond",
+        "water",
+        "bird",
+        "reflection",
+        "leaves",
+      ],
     },
   ];
 
   let searchResults = videos.filter((video) => {
     return video.tags.includes(searchInput);
   });
-
-  console.log(searchResults);
 
   let videosToShow = searchResults.length ? searchResults : videos;
 
@@ -50,6 +84,8 @@ function App() {
       <Navbar searchInput={searchInput} setSearchInput={setSearchInput} />
 
       <MainTopVideo />
+
+      <BodyLinks />
 
       {videosToShow.map((video, index) => {
         return (
@@ -67,29 +103,29 @@ function App() {
         <div className="col noPadding">
           <PalmTreeFullStyledVideo />
         </div>
-      </div>
+      </div> */}
 
-      <BodyLinks />
+      {/* <BodyLinks /> */}
 
-      <div className="row">
+      {/* <div className="row">
         <div className="col noPadding">
           <LeafVideo />
         </div>
         <div className="col noPadding">
           <LeafStyledVideo />
         </div>
-      </div>
+      </div> */}
 
-      <div className="row">
+      {/* <div className="row">
         <div className="col noPadding">
           <RockyWaterVideo />
         </div>
         <div className="col noPadding">
           <RockyWaterStyledVideo />
         </div>
-      </div>
+      </div> */}
 
-      <div className="row">
+      {/* <div className="row">
         <div className="col noPadding">
           <FloralFloorVideo />
         </div>

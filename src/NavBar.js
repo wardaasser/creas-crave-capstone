@@ -42,8 +42,8 @@ const Navbar = ({ searchInput, setSearchInput }) => {
                       placeholder="get creative"
                       aria-label="Search"
                       value={searchInput}
-                      onChange={(evt) => {
-                        setSearchInput(evt.target.value);
+                      onChange={(event) => {
+                        setSearchInput(event.target.value);
                       }}
                     />
                     <button
