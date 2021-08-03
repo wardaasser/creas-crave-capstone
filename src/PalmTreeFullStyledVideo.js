@@ -22,7 +22,7 @@ export function PalmTreeFullStyledVideo() {
         href="https://gumroad.com/l/cDijE"
         style={{
           position: "absolute",
-          top: 215,
+          bottom: 44,
           left: 50,
           zIndex: 5,
           backgroundColor: "#5ce1e6",

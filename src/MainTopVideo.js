@@ -22,11 +22,12 @@ export function MainTopVideo() {
         href="https://gumroad.com/l/VmnNl"
         style={{
           position: "absolute",
-          top: 450,
+          bottom: 44,
           left: 50,
           zIndex: 5,
           backgroundColor: "#5ce1e6",
           border: "none",
+          role: "button",
         }}
         data-cy="buy-main-vid"
       >

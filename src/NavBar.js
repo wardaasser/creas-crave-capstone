@@ -1,7 +1,8 @@
 // import shoppingCartImg from "./images/shoppingCart.png";
+
 import headShoulder from "./images/headShoulder.png";
 
-const Navbar = () => {
+const Navbar = ({ searchInput, setSearchInput }) => {
   return (
     <div className="container-fluid">
       <div className="row">
@@ -40,12 +41,15 @@ const Navbar = () => {
                       type="search"
                       placeholder="get creative"
                       aria-label="Search"
+                      value={searchInput}
+                      onChange={(evt) => {
+                        setSearchInput(evt.target.value);
+                      }}
                     />
                     <button
                       className="btn btn-outline-light"
                       type="button"
                       id="searchSubmitBtn"
-                      data-cy="search-submit"
                     >
                       search
                     </button>
@@ -61,13 +65,15 @@ const Navbar = () => {
                   />
                 </div> */}
                 <div className="col-1">
-                  <img
-                    className="img-responsive"
-                    style={{ height: 34, marginTop: 3, paddingRight: 410 }}
-                    src={headShoulder}
-                    alt="Head and Shoulders"
-                    id="headShoulder"
-                  />
+                  <a href="https://latoniamertica.dev/Creas-Crave-Capstone/">
+                    <img
+                      className="img-responsive"
+                      style={{ height: 34, marginTop: 3, paddingRight: 410 }}
+                      src={headShoulder}
+                      alt="Head and Shoulders"
+                      id="headShoulder"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

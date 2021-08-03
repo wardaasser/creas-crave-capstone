@@ -19,32 +19,48 @@ import { WaterWalkStyledVideo } from "./WaterWalkStyledVideo";
 import { FloralFloorVideo } from "./FloralFloorVideo";
 import { FloralFloorStyledVideo } from "./FloralFloorStyledVideo";
 
+import { useState } from "react";
+
 function App() {
+  const [searchInput, setSearchInput] = useState("");
+
+  const videos = [
+    {
+      original: <WaterWalkVideo />,
+      styled: <WaterWalkStyledVideo />,
+      tags: ["water", "walk"],
+    },
+    {
+      original: <CrocWalkVideo />,
+      styled: <CrocWalkStyledVideo />,
+      tags: ["water", "croc"],
+    },
+  ];
+
+  let searchResults = videos.filter((video) => {
+    return video.tags.includes(searchInput);
+  });
+
+  console.log(searchResults);
+
+  let videosToShow = searchResults.length ? searchResults : videos;
+
   return (
     <div className="App container-fluid">
-      <Navbar />
+      <Navbar searchInput={searchInput} setSearchInput={setSearchInput} />
 
       <MainTopVideo />
 
-      <div className="row">
-        <div className="col noPadding">
-          <WaterWalkVideo />
-        </div>
-        <div className="col noPadding">
-          <WaterWalkStyledVideo />
-        </div>
-      </div>
+      {videosToShow.map((video, index) => {
+        return (
+          <div className="row" key={index}>
+            <div className="col noPadding">{video.original}</div>
+            <div className="col noPadding">{video.styled}</div>
+          </div>
+        );
+      })}
 
-      <div className="row">
-        <div className="col noPadding">
-          <CrocWalkVideo />
-        </div>
-        <div className="col noPadding">
-          <CrocWalkStyledVideo />
-        </div>
-      </div>
-
-      <div className="row">
+      {/* <div className="row">
         <div className="col noPadding">
           <PalmTreeFullVideo />
         </div>
@@ -80,7 +96,7 @@ function App() {
         <div className="col noPadding">
           <FloralFloorStyledVideo />
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

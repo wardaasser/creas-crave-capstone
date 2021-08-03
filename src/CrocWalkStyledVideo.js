@@ -22,7 +22,7 @@ export function CrocWalkStyledVideo() {
         href="https://gumroad.com/l/ftskH"
         style={{
           position: "absolute",
-          top: 215,
+          bottom: 44,
           left: 50,
           zIndex: 5,
           backgroundColor: "#5ce1e6",

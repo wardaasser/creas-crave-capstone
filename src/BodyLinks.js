@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-//CODE FOR FN PAIRED WITH CODE IN MYSTORY BELOW TO JEST TEST
-// export const handleBodyLinks = (bodyLinks) => {
-//   if (bodyLinks === "myStory") {
-//     return "myStory";
-//   } else {
-//     return "false";
-//   }
-// };
+//CODE FOR FUNCTION PAIRED WITH CODE IN EACH SPAN SECTION BELOW TO JEST TEST
+//TO TEST REPLACE INSTANCES OF TESTLINK THAT IS SECOND PARAMETER WITH NAME OF SPAN SECTION FOR EXAMPLE SUBSCRIBE, CONNECT, MYSTORY, PRICING, UNSUBSCRIBE
+export const handleBodyLinks = (bodyLinks, testLink) => {
+  if (bodyLinks === testLink) {
+    return "";
+  } else {
+    return testLink;
+  }
+};
 
 const BodyLinks = () => {
   const [underBodyLinks, setUnderBodyLinks] = useState();
@@ -24,11 +25,15 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkSubscribe"
           id="toSubscribe"
           onClick={() => {
-            if (underBodyLinks === "subscribe") {
-              setUnderBodyLinks("");
-            } else {
-              setUnderBodyLinks("subscribe");
-            }
+            // CODE TO TEST SUBSCRIBE PAIRED WITH FN ABOVE
+            const links = handleBodyLinks(underBodyLinks, "subscribe");
+            setUnderBodyLinks(links);
+
+            // if (underBodyLinks === "subscribe") {
+            //   setUnderBodyLinks("");
+            // } else {
+            //   setUnderBodyLinks("subscribe");
+            // }
           }}
           style={{
             textDecoration:
@@ -42,11 +47,15 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkConnect"
           id="toConnect"
           onClick={() => {
-            if (underBodyLinks === "connect") {
-              setUnderBodyLinks("");
-            } else {
-              setUnderBodyLinks("connect");
-            }
+            // CODE TO TEST CONNECT PAIRED WITH FN ABOVE
+            const links = handleBodyLinks(underBodyLinks, "connect");
+            setUnderBodyLinks(links);
+
+            // if (underBodyLinks === "connect") {
+            //   setUnderBodyLinks("");
+            // } else {
+            //   setUnderBodyLinks("connect");
+            // }
           }}
           style={{
             textDecoration: underBodyLinks === "connect" ? "underline" : "none",
@@ -59,14 +68,15 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkMyStory"
           id="toMyStory"
           onClick={() => {
-            //CODE TO TEST MYSTORY PAIRED WITH FN COMMENTED OUT ABOVE
-            // const links = handleBodyLinks(underBodyLinks);
-            // setUnderBodyLinks(links);
-            if (underBodyLinks === "myStory") {
-              setUnderBodyLinks("");
-            } else {
-              setUnderBodyLinks("myStory");
-            }
+            // CODE TO TEST MYSTORY PAIRED WITH FN ABOVE
+            const links = handleBodyLinks(underBodyLinks, "myStory");
+            setUnderBodyLinks(links);
+
+            // if (underBodyLinks === "myStory") {
+            //   setUnderBodyLinks("");
+            // } else {
+            //   setUnderBodyLinks("myStory");
+            // }
           }}
           style={{
             textDecoration: underBodyLinks === "myStory" ? "underline" : "none",
@@ -80,11 +90,15 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkPricing"
           id="toPricing"
           onClick={() => {
-            if (underBodyLinks === "pricing") {
-              setUnderBodyLinks("");
-            } else {
-              setUnderBodyLinks("pricing");
-            }
+            // CODE TO TEST PRICING PAIRED WITH FN ABOVE
+            const links = handleBodyLinks(underBodyLinks, "pricing");
+            setUnderBodyLinks(links);
+
+            // if (underBodyLinks === "pricing") {
+            //   setUnderBodyLinks("");
+            // } else {
+            //   setUnderBodyLinks("pricing");
+            // }
           }}
           style={{
             textDecoration: underBodyLinks === "pricing" ? "underline" : "none",
@@ -97,11 +111,15 @@ const BodyLinks = () => {
           className="col bodyLinks bodyLinkUnsubscribe"
           id="toUnsubscribe"
           onClick={() => {
-            if (underBodyLinks === "unsubscribe") {
-              setUnderBodyLinks("");
-            } else {
-              setUnderBodyLinks("unsubscribe");
-            }
+            // CODE TO TEST UNSUBSCRIBE PAIRED WITH FN ABOVE
+            const links = handleBodyLinks(underBodyLinks, "unsubscribe");
+            setUnderBodyLinks(links);
+
+            // if (underBodyLinks === "unsubscribe") {
+            //   setUnderBodyLinks("");
+            // } else {
+            //   setUnderBodyLinks("unsubscribe");
+            // }
           }}
           style={{
             textDecoration:
