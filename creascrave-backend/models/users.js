@@ -7,10 +7,10 @@ module.exports = (db) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    nameFirst: DT.TEXT,
-    nameLast: DT.TEXT,
-    jobTitle: DT.TEXT,
-    username: DT.VARCHAR,
-    password: DT.VARCHAR,
+    nameFirst: DT.STRING,
+    nameLast: DT.STRING,
+    jobTitle: DT.STRING,
+    username: DT.STRING,
+    password: DT.STRING,
   });
 };

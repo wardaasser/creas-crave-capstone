@@ -7,7 +7,7 @@ module.exports = (db) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    creativeName: DT.VARCHAR,
-    filePath: DT.VARCHAR,
+    creativeName: DT.STRING,
+    filePath: DT.TEXT,
   });
 };

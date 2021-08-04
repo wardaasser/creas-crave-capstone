@@ -8,6 +8,6 @@ module.exports = (db) => {
       autoIncrement: true,
     },
     customerID: DT.INTEGER,
-    paymentConfirmation: DT.VARCHAR,
+    paymentConfirmation: DT.STRING,
   });
 };

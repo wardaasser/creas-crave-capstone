@@ -1,8 +1,9 @@
 const express = require("express");
-const server = require("express")();
+const server = express();
+
 const cors = require("cors");
-server.use(require("cors")());
-const bodyParser = require("body-parser");
+server.use(cors());
+
 server.use(require("body-parser").json());
 
 const {
@@ -15,16 +16,7 @@ const {
   Users,
 } = require("./models/db.js");
 const Op = require("sequelize").Op;
-
-// const db = new Client({ user: "latoniamertica", database: "creascrave" });
-// db.connect();
-// db.query("SELECT NOW()", (error, res) => {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log(res);
-//   }
-// });
+const { ConnectionRefusedError } = require("sequelize");
 
 const isLoggedInMiddleware = async (req, res, next) => {
   if (!req.headers.email || !req.headers.password) {
@@ -66,12 +58,19 @@ server.get("/customers/:pageNum", isLoggedInMiddleware, async (req, res) => {
   }
 });
 
-server.post("./customers", isLoggedInMiddleware, async (req, res) => {
-  if (req.body.zipCode.length !== 5) {
+server.post("/customers", async (req, res) => {
+  if (req.body.addressShippingZipCode.length !== 5) {
     res.send({ error: "Zip Code Too Short" });
   } else {
-    await Customers.create(req.body);
-    res.send({ customers: await Customers.findAll() });
+    const newUser = await Users.create({
+      username: req.body.username,
+      password: req.body.password,
+    });
+    const newCustomer = await Customers.create({
+      ...req.body,
+      userID: newUser.userID,
+    });
+    res.send({ customer: newCustomer });
   }
 });
 
@@ -87,48 +86,6 @@ server.post(`/customersSearch`, async (req, res) => {
     }),
   });
 });
-
-// const getCustomers = async () => {
-//   const customers = await db.query(`SELECT * FROM customers`);
-//   return customers.rows;
-// };
-
-// server.get(`/creascrave/customers`, async (req, res) => {
-//   res.send({ customers: await getCustomers() });
-// });
-
-// server.post(`/creascrave/customers`, async (req, res) => {
-//   await db.query(`INSERT INTO customers
-//   ("namefirst", "namelast", "addressphysicalnumberandstreet", "addressphysicalcity","addressphysicalstate", "addressphysicalzipcode", "phonenumber", "addressshippingnumberandstreet", "addressshippingcity", "addressshippingstate", "addressshippingzipcode", timestamp) VALUES (
-//       '${req.body.namefirst}',
-//       '${req.body.namelast}',
-//       '${req.body.addressphysicalnumberandstreet}',
-//       '${req.body.addressphysicalcity}',
-//       '${req.body.addressphysicalstate}',
-//       '${req.body.addressphysicalzipcode}',
-//       '${req.body.phonenumber}',
-//       '${req.body.addressshippingnumberandstreet}',
-//       '${req.body.addressshippingcity}',
-//       '${req.body.addressshippingzipcode}',
-//       '${req.body.emailAddress}',
-//       NOW()
-//       )`);
-
-//   const customers = await db.query(`SELECT * FROM creascrave.customers`);
-//   res.send({ customers: await getCustomers() });
-// });
-
-// server.put(`/creascrave/customers`, async (req, res) => {
-//   await db.query(
-//     `UPDATE creascrave.customers SET namefirst=${req.body.namefirst} WHERE id=${req.body.id}`
-//   );
-//   res.send({ customers: await getCustomers() });
-// });
-
-// server.delete(`/creascrave/customers`, async (req, res) => {
-//   await db.query(`DELETE FROM customers WHERE id=${req.body.id}`);
-//   res.send({ customers: await getCustomers() });
-// });
 
 server.post(`/login`, async (req, res) => {
   const customersDB = await Customers.findOne({
@@ -147,6 +104,14 @@ server.post(`/login`, async (req, res) => {
       res.send({ error: "Password Does Not Match Customer Account" });
     }
   }
+});
+
+server.get("/customersFavorites", async (req, res) => {
+  res.send({
+    customers: await Customers.findAll({
+      include: [{ model: Favorites, include: [{ model: Creatives }] }],
+    }),
+  });
 });
 
 server.listen(4400, () => {
