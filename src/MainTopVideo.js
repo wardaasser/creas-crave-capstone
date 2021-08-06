@@ -1,5 +1,6 @@
 import React from "react";
 import PalmTree from "./PalmTree.mp4";
+import lightBulbLikeIcon from "./images/lightBulbLikeIcon.png";
 
 export function MainTopVideo() {
   return (
@@ -16,6 +17,26 @@ export function MainTopVideo() {
         id="mainTopVideo"
         type="video/mp4"
       ></video>
+
+      <a
+        className="likeIcon"
+        href="/favorites"
+        style={{
+          position: "absolute",
+          bottom: 88,
+          left: 60,
+          zIndex: 6,
+          role: "button",
+        }}
+      >
+        <img
+          className="lightBulbLikeIcon img-responsive"
+          style={{ height: 37 }}
+          src={lightBulbLikeIcon}
+          alt="Light Bulb Icon"
+          id="lightBulbLikeIcon"
+        />
+      </a>
 
       <a
         className="btn btn-secondary zoom"

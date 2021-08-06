@@ -8,7 +8,10 @@ const Navbar = ({ searchInput, setSearchInput }) => {
       <div className="row">
         <nav className="navbar navbar-expand-lg fixed-top navbar-light bglmccsblue">
           <div className="container-fluid">
-            <a className="navbar-brand" href={{ Navbar }}>
+            <a
+              className="navbar-brand"
+              href={"https://latoniamertica.dev/Creas-Crave-Capstone/"}
+            >
               CREAS CRAVE
             </a>
             <button
@@ -65,7 +68,7 @@ const Navbar = ({ searchInput, setSearchInput }) => {
                   />
                 </div> */}
                 <div className="col-1">
-                  <a href="https://latoniamertica.dev/Creas-Crave-Capstone/">
+                  <a href="https://creas-crave-frontend.herokuapp.com/">
                     <img
                       className="img-responsive"
                       style={{ height: 34, marginTop: 3, paddingRight: 410 }}

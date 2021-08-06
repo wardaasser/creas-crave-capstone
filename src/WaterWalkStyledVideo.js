@@ -1,5 +1,6 @@
 import React from "react";
 import WaterWalkStyled from "./WaterWalkStyled.mp4";
+import lightBulbLikeIcon from "./images/lightBulbLikeIcon.png";
 
 export function WaterWalkStyledVideo() {
   return (
@@ -16,6 +17,27 @@ export function WaterWalkStyledVideo() {
         id="waterWalkStyledVideo"
         type="video/mp4"
       ></video>
+
+      <a
+        className="likeIcon"
+        href="/favorites"
+        style={{
+          position: "absolute",
+          bottom: 88,
+          left: 50,
+          zIndex: 6,
+          role: "button",
+        }}
+      >
+        <img
+          className="lightBulbLikeIcon img-responsive"
+          style={{ height: 34 }}
+          src={lightBulbLikeIcon}
+          alt="Light Bulb Icon"
+          id="lightBulbLikeIcon"
+        />
+      </a>
+
       <a
         className="btn btn-secondary zoom"
         href="https://gumroad.com/l/dPNuE"

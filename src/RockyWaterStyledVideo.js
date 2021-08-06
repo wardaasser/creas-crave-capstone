@@ -1,5 +1,6 @@
 import React from "react";
 import RockyWaterStyled from "./RockyWaterStyled.mp4";
+import lightBulbLikeIcon from "./images/lightBulbLikeIcon.png";
 
 export function RockyWaterStyledVideo() {
   return (
@@ -16,6 +17,26 @@ export function RockyWaterStyledVideo() {
         id="rockyWaterStyledVideo"
         type="video/mp4"
       ></video>
+
+      <a
+        className="likeIcon"
+        href="/favorites"
+        style={{
+          position: "absolute",
+          bottom: 88,
+          left: 50,
+          zIndex: 6,
+          role: "button",
+        }}
+      >
+        <img
+          className="lightBulbLikeIcon img-responsive"
+          style={{ height: 34 }}
+          src={lightBulbLikeIcon}
+          alt="Light Bulb Icon"
+          id="lightBulbLikeIcon"
+        />
+      </a>
 
       <a
         className="btn btn-secondary zoom"
