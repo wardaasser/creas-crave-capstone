@@ -8,10 +8,7 @@ const Navbar = ({ searchInput, setSearchInput }) => {
       <div className="row">
         <nav className="navbar navbar-expand-lg fixed-top navbar-light bglmccsblue">
           <div className="container-fluid">
-            <a
-              className="navbar-brand"
-              href={"https://latoniamertica.dev/Creas-Crave-Capstone/"}
-            >
+            <a className="navbar-brand" href={"/Creas-Crave-Capstone/"}>
               CREAS CRAVE
             </a>
             <button
