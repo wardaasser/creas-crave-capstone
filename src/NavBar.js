@@ -45,14 +45,19 @@ const Navbar = ({ searchInput, setSearchInput }) => {
                       onChange={(event) => {
                         setSearchInput(event.target.value);
                       }}
+                      id="searchInput"
                     />
-                    <button
+
+                    {/* <button
                       className="btn btn-outline-light"
                       type="button"
                       id="searchSubmitBtn"
+                      value="submit"
+                      onSubmit={searchInput}
+                      resetAfterSubmit={true}
                     >
                       search
-                    </button>
+                    </button> */}
                   </form>
                 </div>
                 {/* <div className="col-1" style={{ marginRight: 20 }}>

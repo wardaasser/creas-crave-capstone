@@ -1,6 +1,6 @@
 import React from "react";
 import LeafStyled from "./LeafStyled.mp4";
-import lightBulbLikeIcon from "./images/lightBulbLikeIcon.png";
+import plusSignFavIcon from "./images/plusSignFavIcon.png";
 
 export function LeafStyledVideo() {
   return (
@@ -19,22 +19,23 @@ export function LeafStyledVideo() {
       ></video>
 
       <a
-        className="likeIcon"
+        className="favIcon"
         href="/favorites"
         style={{
           position: "absolute",
-          bottom: 88,
+          bottom: 81,
           left: 50,
           zIndex: 6,
           role: "button",
         }}
       >
         <img
-          className="lightBulbLikeIcon img-responsive"
-          style={{ height: 34 }}
-          src={lightBulbLikeIcon}
-          alt="Light Bulb Icon"
-          id="lightBulbLikeIcon"
+          className="plusSignFavIcon img-responsive"
+          style={{ width: "5%" }}
+          src={plusSignFavIcon}
+          alt="Plus Sign Icon"
+          id="plusSignFavIcon"
+          title="Fav This!"
         />
       </a>
 
@@ -50,7 +51,7 @@ export function LeafStyledVideo() {
           border: "none",
         }}
       >
-        BUY NOW
+        BUY
       </a>
     </div>
   );

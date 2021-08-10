@@ -146,6 +146,7 @@ const BodyLinks = () => {
                         placeholder="enter email to subscribe"
                         aria-label="your email"
                         aria-describedby="submit"
+                        // required
                       />
                       <button
                         className="btn btn-dark"
@@ -260,6 +261,7 @@ const BodyLinks = () => {
                         placeholder="unsubscribe your email"
                         aria-label="your email"
                         aria-describedby="submit"
+                        // required
                       />
                       <button
                         className="btn btn-dark"

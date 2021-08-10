@@ -1,6 +1,6 @@
 import React from "react";
 import PalmTree from "./PalmTree.mp4";
-import lightBulbLikeIcon from "./images/lightBulbLikeIcon.png";
+import plusSignFavIcon from "./images/plusSignFavIcon.png";
 
 export function MainTopVideo() {
   return (
@@ -19,22 +19,23 @@ export function MainTopVideo() {
       ></video>
 
       <a
-        className="likeIcon"
+        className="favIcon"
         href="/favorites"
         style={{
           position: "absolute",
-          bottom: 88,
+          bottom: 81,
           left: 60,
           zIndex: 6,
           role: "button",
         }}
       >
         <img
-          className="lightBulbLikeIcon img-responsive"
-          style={{ height: 37 }}
-          src={lightBulbLikeIcon}
-          alt="Light Bulb Icon"
-          id="lightBulbLikeIcon"
+          className="plusSignFavIcon img-responsive"
+          style={{ width: "3%" }}
+          src={plusSignFavIcon}
+          alt="Plus Sign Icon"
+          id="plusSignFavIcon"
+          title="Fav This!"
         />
       </a>
 

@@ -1,23 +1,52 @@
 import lmDevLogoImg from "./images/lmDevLogo.png";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [sanJoseTemp, setSanJoseTemp] = useState();
+  const [albanyTemp, setAlbanyTemp] = useState();
+  useEffect(() => {
+    (async () => {
+      const weatherRaw = await fetch(`http://localhost:4400/weatherSanJose`, {
+        method: "GET",
+      });
+      const data = await weatherRaw.json();
+      setSanJoseTemp(Math.round(data.sanJoseTemp));
+    })();
+    (async () => {
+      const weatherRes = await fetch(`http://localhost:4400/weatherAlbany`, {
+        method: "GET",
+      });
+      const data = await weatherRes.json();
+      setAlbanyTemp(Math.round(data.albanyTemp));
+    })();
+  }, []);
   return (
     <div className="container-fluid" id="lineHte">
       <div
         className="row"
         style={{ marginTop: -45, backgroundColor: "#c8c4bd" }}
       >
-        <div className="col">
-          <h1 className="capstone" style={{ paddingTop: 25 }}>
-            CAPSTONE
-            <br />
-          </h1>
+        <div className="col-4"></div>
+        <div className="col-4">
+          <div className="row">
+            <div className="col-2">
+              {sanJoseTemp ? <p>{sanJoseTemp}</p> : null}
+            </div>
+            <div className="col-8">
+              <h1 className="capstone" style={{ paddingTop: 25 }}>
+                CAPSTONE
+              </h1>
+            </div>
+            <div className="col-2">
+              {albanyTemp ? <p>{albanyTemp}</p> : null}
+            </div>
+          </div>
           <h2 id="capstone">Creas Crave eCommerce Portfolio</h2>
           <center>
-            <h6
-              className="col-4"
+            <p
               id="capstoneBlurb"
               style={{
+                lineHeight: 1.25,
                 textAlign: "justify",
                 color: "#545454",
                 paddingBottom: 25,
@@ -36,7 +65,7 @@ const Footer = () => {
               <br />
               Essentially, my goal is to showcase my creative and design skills
               from content to website produced.
-            </h6>
+            </p>
           </center>
           <br />
         </div>
