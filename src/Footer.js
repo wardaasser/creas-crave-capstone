@@ -29,19 +29,66 @@ const Footer = () => {
         <div className="col-4"></div>
         <div className="col-4">
           <div className="row">
-            <div className="col-2">
-              {sanJoseTemp ? <p>{sanJoseTemp}</p> : null}
+            <div className="col-3">
+              {sanJoseTemp ? (
+                <p
+                  style={{
+                    marginTop: 60,
+                    fontFamily: "Madrone Std",
+                    fontSize: 27,
+                    color: "#360836",
+                  }}
+                >
+                  {sanJoseTemp}&#176;
+                  <br />
+                  <span
+                    style={{
+                      fontFamily: "Glacial Indifference",
+                      fontSize: 7,
+                      lineHeight: 5,
+                    }}
+                  >
+                    current costa rica temp
+                  </span>
+                </p>
+              ) : null}
             </div>
-            <div className="col-8">
-              <h1 className="capstone" style={{ paddingTop: 25 }}>
+            <div className="col-6">
+              <h1
+                className="capstone"
+                style={{ paddingTop: 25, textAlign: "center" }}
+              >
                 CAPSTONE
               </h1>
             </div>
-            <div className="col-2">
-              {albanyTemp ? <p>{albanyTemp}</p> : null}
+            <div className="col-3">
+              {albanyTemp ? (
+                <p
+                  style={{
+                    marginTop: 60,
+                    fontFamily: "Madrone Std",
+                    fontSize: 27,
+                    color: "#360836",
+                  }}
+                >
+                  {albanyTemp}&#176;
+                  <br />
+                  <span
+                    style={{
+                      fontFamily: "Glacial Indifference",
+                      fontSize: 7,
+                      lineHeight: 5,
+                    }}
+                  >
+                    current new york temp
+                  </span>
+                </p>
+              ) : null}
             </div>
           </div>
-          <h2 id="capstone">Creas Crave eCommerce Portfolio</h2>
+          <h2 id="capstone" style={{ marginTop: -10 }}>
+            Creas Crave eCommerce Portfolio
+          </h2>
           <center>
             <p
               id="capstoneBlurb"
@@ -57,7 +104,10 @@ const Footer = () => {
               b-roll videos in the left column. In the right columnn, offering
               original high-quality b-roll videos - modestly edited to
               illustrate possibilities. All video captured at immersion visit in
-              Costa Rica.
+              Costa Rica. Left column temperature based on San Jose, capital of
+              Costa Rica, Central America api data from openWeatherApi. Right
+              column temperature based on Albany, capital of New York, United
+              States api data.
               <br />
               <br /> Each video ideal to serve as complementary footage if/when
               used in others' video projects.
