@@ -6,16 +6,22 @@ const Footer = () => {
   const [albanyTemp, setAlbanyTemp] = useState();
   useEffect(() => {
     (async () => {
-      const weatherRaw = await fetch(`http://localhost:4400/weatherSanJose`, {
-        method: "GET",
-      });
+      const weatherRaw = await fetch(
+        `https://creas-crave-backend.herokuapp.com/weatherSanJose`,
+        {
+          method: "GET",
+        }
+      );
       const data = await weatherRaw.json();
       setSanJoseTemp(Math.round(data.sanJoseTemp));
     })();
     (async () => {
-      const weatherRes = await fetch(`http://localhost:4400/weatherAlbany`, {
-        method: "GET",
-      });
+      const weatherRes = await fetch(
+        `https://creas-crave-backend.herokuapp.com/weatherAlbany`,
+        {
+          method: "GET",
+        }
+      );
       const data = await weatherRes.json();
       setAlbanyTemp(Math.round(data.albanyTemp));
     })();

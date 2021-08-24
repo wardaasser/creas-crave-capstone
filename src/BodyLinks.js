@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 //CODE FOR FUNCTION PAIRED WITH CODE IN EACH SPAN SECTION BELOW TO JEST TEST
 //TO TEST REPLACE INSTANCES OF TESTLINK THAT IS SECOND PARAMETER WITH NAME OF SPAN SECTION FOR EXAMPLE SUBSCRIBE, CONNECT, MYSTORY, PRICING, UNSUBSCRIBE
@@ -12,6 +13,8 @@ export const handleBodyLinks = (bodyLinks, testLink) => {
 
 const BodyLinks = () => {
   const [underBodyLinks, setUnderBodyLinks] = useState();
+  const [email, setEmail] = useState("");
+  const [removeEmail, setRemoveEmail] = useState("");
   return (
     <div className="container-fluid">
       <div
@@ -137,30 +140,36 @@ const BodyLinks = () => {
                 style={{ marginTop: underBodyLinks === "" ? 0 : 37 }}
               >
                 <span className="row" id="toSubscribe">
-                  <form>
-                    <div className="input-group" id="input-groupForm">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="emailInput"
-                        placeholder="enter email to subscribe"
-                        aria-label="your email"
-                        aria-describedby="submit"
-                        // required
-                      />
-                      <button
-                        className="btn btn-dark"
-                        type="button"
-                        id="toInputInSubscribe"
-                        style={{
-                          backgroundColor: "#360836",
-                          borderColor: "#5ce1e6",
-                        }}
-                      >
-                        submit
-                      </button>
-                    </div>
-                  </form>
+                  <div className="input-group" id="input-groupForm">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="emailInput"
+                      placeholder="enter email to subscribe"
+                      aria-label="your email"
+                      aria-describedby="submit"
+                      value={email}
+                      onChange={(event) => setEmail(event.target.value)}
+                      // required
+                    />
+                    <button
+                      className="btn btn-dark"
+                      id="toInputInSubscribe"
+                      onClick={() => {
+                        axios.post(
+                          "https://localhost:4400/subscribe",
+                          JSON.stringify({ email: email })
+                        );
+                        // console.log(email);
+                      }}
+                      style={{
+                        backgroundColor: "#360836",
+                        borderColor: "#5ce1e6",
+                      }}
+                    >
+                      submit
+                    </button>
+                  </div>
                 </span>
               </div>
             </div>
@@ -252,30 +261,35 @@ const BodyLinks = () => {
                 style={{ marginTop: underBodyLinks === "" ? 0 : 37 }}
               >
                 <span className="row" id="toUnsubscribe">
-                  <form>
-                    <div className="input-group" id="input-groupForm">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="emailInput"
-                        placeholder="unsubscribe your email"
-                        aria-label="your email"
-                        aria-describedby="submit"
-                        // required
-                      />
-                      <button
-                        className="btn btn-dark"
-                        type="button"
-                        id="toInputInUnsubscribe"
-                        style={{
-                          backgroundColor: "#360836",
-                          borderColor: "#5ce1e6",
-                        }}
-                      >
-                        submit
-                      </button>
-                    </div>
-                  </form>
+                  <div className="input-group" id="input-groupForm">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="emailInput"
+                      placeholder="unsubscribe your email"
+                      aria-label="your email"
+                      aria-describedby="submit"
+                      value={removeEmail}
+                      onChange={(event) => setRemoveEmail(event.target.value)}
+                      // required
+                    />
+                    <button
+                      className="btn btn-dark"
+                      id="toInputInUnsubscribe"
+                      onClick={() => {
+                        axios.delete(
+                          "https://localhost:4400/unsubscribe",
+                          JSON.stringify({ removeEmail: email })
+                        );
+                      }}
+                      style={{
+                        backgroundColor: "#360836",
+                        borderColor: "#5ce1e6",
+                      }}
+                    >
+                      submit
+                    </button>
+                  </div>
                 </span>
               </div>
             </div>
