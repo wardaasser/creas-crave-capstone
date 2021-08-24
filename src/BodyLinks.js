@@ -156,10 +156,17 @@ const BodyLinks = () => {
                       className="btn btn-dark"
                       id="toInputInSubscribe"
                       onClick={() => {
-                        axios.post(
-                          "https://localhost:4400/subscribe",
-                          JSON.stringify({ email: email })
-                        );
+                        axios
+                          .post(
+                            "https://creas-crave-backend.herokuapp.com/subscribers",
+                            {
+                              emailAddress: email,
+                              subscribed: true,
+                            }
+                          )
+                          .then(() => {
+                            alert("Subscribed!");
+                          });
                         // console.log(email);
                       }}
                       style={{
@@ -277,10 +284,17 @@ const BodyLinks = () => {
                       className="btn btn-dark"
                       id="toInputInUnsubscribe"
                       onClick={() => {
-                        axios.delete(
-                          "https://localhost:4400/unsubscribe",
-                          JSON.stringify({ removeEmail: email })
-                        );
+                        axios
+                          .post(
+                            "https://creas-crave-backend.herokuapp.com/subscribers",
+                            {
+                              emailAddress: email,
+                              subscribed: false,
+                            }
+                          )
+                          .then(() => {
+                            alert("Unsubscribed!");
+                          });
                       }}
                       style={{
                         backgroundColor: "#360836",
