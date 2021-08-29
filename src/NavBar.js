@@ -8,7 +8,7 @@ const Navbar = ({ searchInput, setSearchInput }) => {
       <div className="row">
         <nav className="navbar navbar-expand-lg fixed-top navbar-light bglmccsblue">
           <div className="container-fluid">
-            <a className="navbar-brand" href={"/Creas-Crave-Capstone/"}>
+            <a className="navbar-brand" href={"/creas-crave-capstone/"}>
               CREAS CRAVE
             </a>
             <button
