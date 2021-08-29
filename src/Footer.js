@@ -107,9 +107,10 @@ const Footer = () => {
             >
               Create a portfolio-style eCommerce website titled 'CREAS CRAVE'.
               Fully wired. Fully operational. Offering original, high-quality
-              b-roll videos in the left column. In the right columnn, offering
-              original high-quality b-roll videos - modestly edited to
-              illustrate possibilities. All video captured at immersion visit in
+              b-roll videos in the left column. Unedited. In the right columnn,
+              offering original high-quality b-roll videos - modestly edited to
+              illustrate possibilities. All video quality reflects the original
+              content as captured. All video captured at immersion visit in
               Costa Rica. Left column temperature based on San Jose, capital of
               Costa Rica, Central America api data from openWeatherApi. Right
               column temperature based on Albany, capital of New York, United
