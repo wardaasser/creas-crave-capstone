@@ -150,17 +150,20 @@ const BodyLinks = () => {
                       aria-describedby="submit"
                       value={email}
                       onChange={(event) => setEmail(event.target.value)}
+
                       // required
                     />
                     <button
                       className="btn btn-dark"
                       id="toInputInSubscribe"
                       onClick={() => {
+                        const emailToSend = email;
+                        setEmail("");
                         axios
                           .post(
                             "https://creas-crave-backend.herokuapp.com/subscribers",
                             {
-                              emailAddress: email,
+                              emailAddress: emailToSend,
                               subscribed: true,
                             }
                           )
@@ -284,11 +287,13 @@ const BodyLinks = () => {
                       className="btn btn-dark"
                       id="toInputInUnsubscribe"
                       onClick={() => {
+                        const emailToRemove = removeEmail;
+                        setRemoveEmail("");
                         axios
                           .post(
                             "https://creas-crave-backend.herokuapp.com/subscribers",
                             {
-                              emailAddress: email,
+                              emailAddress: emailToRemove,
                               subscribed: false,
                             }
                           )

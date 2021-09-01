@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CrocWalk from "./CrocWalk.mp4";
 import plusSignFavIcon from "./images/plusSignFavIcon.png";
+import axios from "axios";
 
 export function CrocWalkVideo() {
+  const videoName = "Croc Walk";
+  const [favorited, setFavorited] = useState(false);
+
+  useEffect(() => {
+    if (!window.localStorage.favoriteFavorites) {
+      window.localStorage.favoriteFavorites = "";
+    }
+    let favoritedFavorites = window.localStorage.favoriteFavorites.split(",");
+    if (favoritedFavorites.includes(videoName)) {
+      setFavorited(true);
+    }
+  }, []);
   return (
     <div style={{ position: "relative" }}>
       <video
@@ -30,12 +43,36 @@ export function CrocWalkVideo() {
         }}
       >
         <img
-          className="plusSignFavIcon img-responsive"
+          className={`plusSignFavIcon img-responsive ${
+            favorited ? "favorited" : ""
+          }`}
           style={{ width: "5%" }}
           src={plusSignFavIcon}
           alt="Plus Sign Icon"
           id="plusSignFavIcon"
           title="Fav This!"
+          onClick={(evt) => {
+            evt.preventDefault();
+
+            setFavorited(!favorited);
+
+            if (!window.localStorage.favoriteFavorites) {
+              window.localStorage.favoriteFavorites = "";
+            }
+            let favoritedFavorites =
+              window.localStorage.favoriteFavorites.split(",");
+            if (favoritedFavorites.includes(videoName)) {
+              alert("Removed from favorites");
+              favoritedFavorites = favoritedFavorites.filter(
+                (name) => name !== videoName
+              );
+            } else {
+              favoritedFavorites.push(videoName);
+              alert("Added to Faves!");
+            }
+            window.localStorage.favoriteFavorites =
+              favoritedFavorites.join(",");
+          }}
         />
       </a>
 
