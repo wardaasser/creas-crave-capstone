@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import WaterWalk from "./WaterWalk.mp4";
 import plusSignFavIcon from "./images/plusSignFavIcon.png";
 
 export function WaterWalkVideo() {
+  const videoName = "Water Walk";
+  const [favorited, setFavorited] = useState(false);
+
+  useEffect(() => {
+    if (!window.localStorage.favoriteFavorites) {
+      window.localStorage.favoriteFavorites = "";
+    }
+    let favoritedFavorites = window.localStorage.favoriteFavorites.split(",");
+    if (favoritedFavorites.includes(videoName)) {
+      setFavorited(true);
+    }
+  }, []);
+
   return (
     <div style={{ position: "relative" }}>
       <video
@@ -30,12 +43,36 @@ export function WaterWalkVideo() {
         }}
       >
         <img
-          className="plusSignFavIcon img-responsive"
+          className={`plusSignFavIcon img-responsive ${
+            favorited ? "favorited" : ""
+          }`}
           style={{ width: "5%" }}
           src={plusSignFavIcon}
           alt="Plus Sign Icon"
           id="plusSignFavIcon"
           title="Fav This!"
+          onClick={(event) => {
+            event.preventDefault();
+
+            setFavorited(!favorited);
+
+            if (!window.localStorage.favoriteFavorites) {
+              window.localStorage.favoriteFavorites = "";
+            }
+            let favoritedFavorites =
+              window.localStorage.favoriteFavorites.split(",");
+            if (favoritedFavorites.includes(videoName)) {
+              alert("No Longer Favorited!");
+              favoritedFavorites = favoritedFavorites.filter(
+                (name) => name !== videoName
+              );
+            } else {
+              favoritedFavorites.push(videoName);
+              alert("Faved!");
+            }
+            window.localStorage.favoriteFavorites =
+              favoritedFavorites.join(",");
+          }}
         />
       </a>
 

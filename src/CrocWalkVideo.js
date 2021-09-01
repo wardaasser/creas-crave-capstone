@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CrocWalk from "./CrocWalk.mp4";
 import plusSignFavIcon from "./images/plusSignFavIcon.png";
-import axios from "axios";
 
 export function CrocWalkVideo() {
   const videoName = "Croc Walk";
@@ -51,8 +50,8 @@ export function CrocWalkVideo() {
           alt="Plus Sign Icon"
           id="plusSignFavIcon"
           title="Fav This!"
-          onClick={(evt) => {
-            evt.preventDefault();
+          onClick={(event) => {
+            event.preventDefault();
 
             setFavorited(!favorited);
 
@@ -62,13 +61,13 @@ export function CrocWalkVideo() {
             let favoritedFavorites =
               window.localStorage.favoriteFavorites.split(",");
             if (favoritedFavorites.includes(videoName)) {
-              alert("Removed from favorites");
+              alert("No Longer Favorited!");
               favoritedFavorites = favoritedFavorites.filter(
                 (name) => name !== videoName
               );
             } else {
               favoritedFavorites.push(videoName);
-              alert("Added to Faves!");
+              alert("Faved!");
             }
             window.localStorage.favoriteFavorites =
               favoritedFavorites.join(",");
