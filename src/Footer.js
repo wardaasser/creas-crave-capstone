@@ -107,7 +107,7 @@ const Footer = () => {
             >
               Create a portfolio-style eCommerce website titled 'CREAS CRAVE'.
               Fully wired. Fully operational. Offering original, high-quality
-              b-roll videos in the left column. Unedited. In the right columnn,
+              b-roll videos in the left column. Unedited. In the right column,
               offering original high-quality b-roll videos - modestly edited to
               illustrate possibilities. All video quality reflects the original
               content as captured. All video captured at immersion visit in
