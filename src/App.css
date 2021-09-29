@@ -46,6 +46,11 @@ form > input::placeholder,
   font-size: smaller;
 }
 
+input#searchInput.form-control.me-2,
+input#searchInput.form-control.me-2:hover {
+  box-shadow: none;
+}
+
 #shopCart {
   filter: invert();
   padding-top: 5px;
