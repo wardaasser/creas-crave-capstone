@@ -239,6 +239,10 @@ sup {
   font-size: 13px;
 }
 
+div.col-3 {
+  text-align: center;
+}
+
 #fortyFour {
   font-family: "Zapfino";
   text-shadow: -1px 0 lightyellow, 0 1px lightyellow, 1.5px 0 lightyellow,
@@ -314,4 +318,47 @@ h2 {
 
 .emailHover:hover {
   color: #5ce1e6 !important;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1068px) {
+  h1.capstone {
+    font-size: x-large;
+    margin-top: 24px;
+  }
+}
+@media only screen and (max-width: 925px) {
+  .navbar-brand,
+  span.navbar-toggler-icon,
+  nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bglmccsblue,
+  video#mainTopVideo.vidContainer,
+  div#bodyLinks,
+  video,
+  img#plusSignFavicon.plusSignFavicon.img-responsive,
+  a.btn,
+  div.col-3,
+  div.col-6,
+  div.col-4,
+  div.col {
+    display: none;
+  }
+  h1 {
+    color: #c8c4bd;
+    text-shadow: 0.25px 0.25px #545454;
+    text-align: center;
+    font-size: x-large;
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+  h2 {
+    font-style: italic;
+    font-size: small;
+    text-align: center justify;
+  }
+  img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

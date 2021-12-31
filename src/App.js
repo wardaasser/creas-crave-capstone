@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./Navbar";
 import BodyLinks from "./BodyLinks";
 import Footer from "./Footer";
+import lmDevLogo from "./images/lmDevLogo.png";
 
 import { MainTopVideo } from "./MainTopVideo";
 
@@ -80,12 +81,16 @@ function App() {
   let videosToShow = searchResults.length ? searchResults : videos;
 
   return (
-    <div className="App container-fluid">
-      <Navbar searchInput={searchInput} setSearchInput={setSearchInput} />
+    <div className="App container-fluid screenSizeIncreasePlsClass">
+      <Navbar
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        className="noneDisplayContentClass"
+      />
 
-      <MainTopVideo />
+      <MainTopVideo className="noneDisplayContentClass" />
 
-      <BodyLinks />
+      <BodyLinks className="noneDisplayContentClass" />
 
       {videosToShow.map((video, index) => {
         return (
@@ -133,6 +138,20 @@ function App() {
           <FloralFloorStyledVideo />
         </div>
       </div> */}
+
+      <div className="screenSizeIncreasePlsClass">
+        <h1>more space please</h1>
+        <h2>
+          current screen size is smaller
+          <br />
+          than the screen size needed.
+          <br />
+          please expand the window.
+          <br />
+          or use larger device/screen.
+        </h2>
+        <img src={lmDevLogo} />
+      </div>
       <Footer />
     </div>
   );
