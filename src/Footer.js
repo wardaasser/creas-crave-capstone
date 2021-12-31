@@ -54,7 +54,7 @@ const Footer = () => {
                       lineHeight: 5,
                     }}
                   >
-                    current costa rica temp
+                    costa rica
                   </span>
                 </p>
               ) : null}
@@ -86,7 +86,7 @@ const Footer = () => {
                       lineHeight: 5,
                     }}
                   >
-                    current new york temp
+                    new york
                   </span>
                 </p>
               ) : null}
